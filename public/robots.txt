@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://capitalroyalservices.github.io/CapitalRoyalServices/sitemap.xml

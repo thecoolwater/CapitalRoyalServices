@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #12213a;
+  background: #f7f9fc;
+  font-family: Inter, system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+::selection {
+  background: rgba(201, 154, 61, 0.28);
+}
+
+.glass-panel {
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 80px rgba(4, 13, 30, 0.2);
+  backdrop-filter: blur(18px);
+}
+
+.premium-card {
+  border: 1px solid rgba(7, 24, 50, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 24px 70px rgba(7, 24, 50, 0.1);
+}
+
+.gold-text {
+  background: linear-gradient(135deg, #c99a3d, #f3d487 55%, #c99a3d);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.map-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.route-line {
+  stroke-dasharray: 11 13;
+  animation: dash 8s linear infinite;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 220;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.focus-ring {
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+.focus-ring:focus-visible {
+  outline-color: #f3d487;
+}
