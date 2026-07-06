@@ -166,7 +166,7 @@ export const countries = [
   {
     name: 'Egypt',
     summary: 'Tour and travel document support for historic leisure and business visits.',
-    image: 'https://images.unsplash.com/photo-1539650116574-75c0c6d73f6e?auto=format&fit=crop&w=900&q=80',
+    image: 'https://images.unsplash.com/photo-1503177119275-0aa32b3a9368?auto=format&fit=crop&w=900&q=80',
   },
   {
     name: 'Europe',
