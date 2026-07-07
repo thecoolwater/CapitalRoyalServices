@@ -53,10 +53,6 @@ export function Footer() {
             <Phone size={18} aria-hidden="true" />
             {company.phone}
           </a>
-          <a href={`tel:${company.secondaryPhone.replace(/\s/g, '')}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
-            <Phone size={18} aria-hidden="true" />
-            {company.secondaryPhone}
-          </a>
           <a href={`mailto:${company.email}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
             <Mail size={18} aria-hidden="true" />
             {company.email}

@@ -13,7 +13,7 @@ export function FaqSection() {
         <SectionHeading
           eyebrow="Visa FAQ"
           title="Answers before you begin"
-          text="Practical notes about timelines, approvals, documents, and consultation before you start your visa application from Surat or anywhere in India."
+          text="Practical notes about timelines, approvals, documents, and consultation before you start your visa application from anywhere in India."
         />
 
         <div className="space-y-4">

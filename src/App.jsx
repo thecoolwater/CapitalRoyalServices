@@ -17,16 +17,16 @@ import { setPageMeta } from './utils/seo';
 
 const pageMeta = {
   '/': {
-    title: 'Visa Consultant in Surat for India',
-    description: 'Capital Royal Services is a Surat-based visa and travel consultancy serving clients across India for visit, tourist, business, student, work, Umrah, passport, and overseas job assistance.',
+    title: 'Visa Consultant for India',
+    description: 'Capital Royal Services is a visa and travel consultancy serving clients across India for visit, tourist, business, student, work, Umrah, passport, and overseas job assistance.',
   },
   '/about': {
     title: 'About Capital Royal Services',
-    description: 'Learn why clients in Surat, Gujarat, and across India choose Capital Royal Services for visa consultancy, document preparation, travel, Umrah, passport, and overseas job support.',
+    description: 'Learn why clients across India choose Capital Royal Services for visa consultancy, document preparation, travel, Umrah, passport, and overseas job support.',
   },
   '/services': {
     title: 'Visa and Travel Services',
-    description: 'Explore visit visa, tourist visa, business visa, student visa, work visa, family visa, passport, tours, Umrah, and job assistance services from Surat for clients across India.',
+    description: 'Explore visit visa, tourist visa, business visa, student visa, work visa, family visa, passport, tours, Umrah, and job assistance services for clients across India.',
   },
   '/countries': {
     title: 'Countries We Serve',
@@ -38,7 +38,7 @@ const pageMeta = {
   },
   '/why-choose-us': {
     title: 'About Capital Royal Services',
-    description: 'Fast processing, expert guidance, transparent pricing, documentation support, and 24x7 personal assistance from a Surat-based visa consultancy serving India.',
+    description: 'Fast processing, expert guidance, transparent pricing, documentation support, and 24x7 personal assistance from a visa consultancy serving India.',
   },
   '/testimonials': {
     title: 'Testimonials',
@@ -50,7 +50,7 @@ const pageMeta = {
   },
   '/contact': {
     title: 'Contact',
-    description: 'Contact Capital Royal Services in Surat for a free visa, travel, Umrah, passport, or overseas job assistance consultation anywhere in India.',
+    description: 'Contact Capital Royal Services for a free visa, travel, Umrah, passport, or overseas job assistance consultation anywhere in India.',
   },
 };
 

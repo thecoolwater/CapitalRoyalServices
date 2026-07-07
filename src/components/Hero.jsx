@@ -51,7 +51,7 @@ export function Hero() {
             className="mb-6 inline-flex max-w-full items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold leading-6 text-lightGold backdrop-blur sm:rounded-full"
           >
             <BadgeCheck className="shrink-0" size={17} aria-hidden="true" />
-            <span className="min-w-0 break-words">Surat-based visa, immigration and travel consultancy serving all India</span>
+            <span className="min-w-0 break-words">Visa, immigration and travel consultancy serving all India</span>
           </motion.div>
 
           <motion.h1
@@ -74,7 +74,7 @@ export function Hero() {
             className="mt-6 max-w-2xl text-lg leading-8 text-white/76"
           >
             Premium support for visit, tourist, business, student, work, family, Umrah, passport, documentation, tour packages, and overseas job assistance.
-            Based in Surat, we guide travellers, students, families, and professionals across India with clear visa file preparation.
+            We guide travellers, students, families, and professionals across India with clear visa file preparation.
           </motion.p>
 
           <motion.div

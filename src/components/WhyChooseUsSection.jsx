@@ -12,7 +12,7 @@ export function WhyChooseUsSection() {
         <SectionHeading
           eyebrow="About Our Visa Consultancy"
           title="Why travellers across India choose Capital Royal Services"
-          text="You get practical advice, organized documents, transparent communication, and a Surat-based team that supports applicants across India."
+          text="You get practical advice, organized documents, transparent communication, and a dedicated team that supports applicants across India."
           light
         />
 

@@ -85,3 +85,39 @@ img {
 .focus-ring:focus-visible {
   outline-color: #f3d487;
 }
+
+.promo-story-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, 0.18) 42%, transparent 58%);
+  transform: translateX(-115%);
+  animation: promo-shine 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.promo-plane {
+  animation: promo-float 4.8s ease-in-out infinite;
+}
+
+@keyframes promo-shine {
+  0%,
+  42% {
+    transform: translateX(-115%);
+  }
+  68%,
+  100% {
+    transform: translateX(115%);
+  }
+}
+
+@keyframes promo-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-8deg);
+  }
+  50% {
+    transform: translate3d(-14px, 10px, 0) rotate(7deg);
+  }
+}

@@ -10,7 +10,7 @@ export function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Start with a free visa consultation"
-          text="Tell us your destination, purpose of travel, and target date. Our Surat team supports clients across India with the most practical next step."
+          text="Tell us your destination, purpose of travel, and target date. Our team supports clients across India with the most practical next step."
         />
 
         <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
@@ -18,7 +18,6 @@ export function ContactSection() {
             <div className="h-72 bg-[url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center" role="img" aria-label="Modern business district office location" />
             <div className="space-y-5 p-7">
               <ContactItem icon={Phone} label="Phone" value={company.phone} href={`tel:${company.phone.replace(/\s/g, '')}`} />
-              <ContactItem icon={Phone} label="Alternate Phone" value={company.secondaryPhone} href={`tel:${company.secondaryPhone.replace(/\s/g, '')}`} />
               <ContactItem icon={MessageCircle} label="WhatsApp" value={company.whatsapp} href={`https://wa.me/${company.whatsapp.replace(/\D/g, '')}`} />
               <ContactItem icon={Mail} label="Email" value={company.email} href={`mailto:${company.email}`} />
               <ContactItem icon={MapPin} label="Office Address" value={company.address} />
@@ -26,7 +25,7 @@ export function ContactSection() {
                 <p className="text-sm font-bold uppercase tracking-[0.2em] text-lightGold">Google Map</p>
                 <iframe
                   title="Capital Royal Services office map"
-                  src="https://www.google.com/maps?q=Surat%20Gujarat%20India&output=embed"
+                  src="https://www.google.com/maps?q=India&output=embed"
                   className="mt-4 h-64 w-full rounded-2xl border-0"
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
@@ -38,7 +37,7 @@ export function ContactSection() {
           <form className="premium-card rounded-[2rem] p-6 md:p-8" aria-label="Visa consultation form">
             <div className="grid gap-5 md:grid-cols-2">
               <Field label="Full Name" name="name" placeholder="Your full name" />
-              <Field label="Phone / WhatsApp" name="phone" placeholder="+91 87800 44085" />
+              <Field label="Phone / WhatsApp" name="phone" placeholder="+91 7698692693" />
               <Field label="Email" name="email" type="email" placeholder="you@example.com" />
               <Field label="Destination" name="destination" placeholder="Dubai, UK, Canada..." />
               <label className="md:col-span-2">

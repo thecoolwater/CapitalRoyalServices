@@ -26,12 +26,11 @@ const assetBase = import.meta.env.BASE_URL;
 export const company = {
   name: 'Capital Royal Services',
   tagline: 'Your Journey, Our Priority',
-  phone: '+91 76986 92693',
-  secondaryPhone: '+91 87800 44085',
-  whatsapp: '+91 87800 44085',
+  phone: '+91 7698692693',
+  whatsapp: '+91 7698692693',
   email: 'info@capitalroyalservices.com',
-  address: 'Capital Royal Services, Surat, Gujarat, India',
-  location: 'Surat, Gujarat',
+  address: 'Capital Royal Services, India',
+  location: 'India',
   logo: `${assetBase}capital-royal-logo.jpg`,
   poster: `${assetBase}capital-royal-services-poster.jpg`,
 };
@@ -55,7 +54,7 @@ export const stats = [
 export const services = [
   {
     title: 'Visit Visa',
-    description: 'Short-term visit visa support from Surat for family visits, events, and personal travel with complete document checks for clients across India.',
+    description: 'Short-term visit visa support for family visits, events, and personal travel with complete document checks for clients across India.',
     icon: Plane,
   },
   {
@@ -112,6 +111,24 @@ export const services = [
     title: 'Tourist Visa',
     description: 'Country-specific tourist visa filing support for smooth leisure travel and confident departures.',
     icon: Sparkles,
+  },
+];
+
+export const promoStories = [
+  {
+    title: 'Visit Visa Made Simple',
+    text: 'A vertical travel-promo style WebP for quick visa enquiries, tourist travel, business visits, and family trips.',
+    image: `${assetBase}travel-promo-visa.webp`,
+  },
+  {
+    title: 'Umrah and Family Visit',
+    text: 'Premium branded story creative for spiritual journeys, family visits, hotel guidance, and travel support.',
+    image: `${assetBase}travel-promo-umrah.webp`,
+  },
+  {
+    title: 'Study, Work and Business',
+    text: 'A polished promo panel for international opportunities, documentation, checklists, and filing support.',
+    image: `${assetBase}travel-promo-study-work.webp`,
   },
 ];
 
@@ -179,7 +196,7 @@ export const countries = [
 ];
 
 export const whyChooseUs = [
-  { title: 'Surat-based, India-wide Service', text: 'Local support from Surat with remote consultation for applicants across Gujarat and all over India.', icon: MapPinned },
+  { title: 'India-wide Service', text: 'Remote consultation and guided visa support for applicants across India.', icon: MapPinned },
   { title: 'Fast Processing', text: 'Clear timelines, priority preparation, and timely application tracking for urgent and planned travel.', icon: Clock3 },
   { title: 'Expert Guidance', text: 'Destination-specific consultants help you choose the right visa path before money and time are wasted.', icon: BadgeCheck },
   { title: 'Transparent Pricing', text: 'Service scope and fees are explained before work begins, with no confusing promises.', icon: CheckCircle2 },
@@ -239,7 +256,7 @@ export const testimonials = [
 export const faqs = [
   {
     question: 'Which visa categories do you handle?',
-    answer: 'We assist with visit, tourist, business, student, work, family, Umrah, passport, travel consultation, overseas job assistance, and documentation support for clients in Surat, Gujarat, and across India.',
+    answer: 'We assist with visit, tourist, business, student, work, family, Umrah, passport, travel consultation, overseas job assistance, and documentation support for clients across India.',
   },
   {
     question: 'Can you guarantee visa approval?',
