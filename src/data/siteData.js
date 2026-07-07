@@ -21,13 +21,19 @@ import {
   Users,
 } from 'lucide-react';
 
+const assetBase = import.meta.env.BASE_URL;
+
 export const company = {
   name: 'Capital Royal Services',
   tagline: 'Your Journey, Our Priority',
-  phone: '+91 98765 43210',
-  whatsapp: '+91 98765 43210',
+  phone: '+91 76986 92693',
+  secondaryPhone: '+91 87800 44085',
+  whatsapp: '+91 87800 44085',
   email: 'info@capitalroyalservices.com',
-  address: 'Capital Royal Services, Main Business District, India',
+  address: 'Capital Royal Services, Surat, Gujarat, India',
+  location: 'Surat, Gujarat',
+  logo: `${assetBase}capital-royal-logo.jpg`,
+  poster: `${assetBase}capital-royal-services-poster.jpg`,
 };
 
 export const navLinks = [
@@ -36,9 +42,6 @@ export const navLinks = [
   { label: 'Services', to: '/services' },
   { label: 'Countries', to: '/countries' },
   { label: 'Visa Process', to: '/visa-process' },
-  { label: 'Why Choose Us', to: '/why-choose-us' },
-  { label: 'Testimonials', to: '/testimonials' },
-  { label: 'FAQ', to: '/faq' },
   { label: 'Contact', to: '/contact' },
 ];
 
@@ -52,27 +55,27 @@ export const stats = [
 export const services = [
   {
     title: 'Visit Visa',
-    description: 'Short-term travel visa support for family visits, events, and personal travel with complete document checks.',
+    description: 'Short-term visit visa support from Surat for family visits, events, and personal travel with complete document checks for clients across India.',
     icon: Plane,
   },
   {
     title: 'Business Visa',
-    description: 'Professional guidance for meetings, exhibitions, trade visits, and corporate travel requirements.',
+    description: 'Business visa guidance for meetings, exhibitions, trade visits, and corporate travel requirements in the Gulf, Europe, UK, USA, and Asia.',
     icon: BriefcaseBusiness,
   },
   {
     title: 'Student Visa',
-    description: 'Admission-aligned visa support, financial documentation review, and interview preparation.',
+    description: 'Student visa consulting with admission-aligned file planning, financial documentation review, and interview preparation.',
     icon: GraduationCap,
   },
   {
     title: 'Work Visa',
-    description: 'End-to-end work permit and employment visa assistance for qualified international opportunities.',
+    description: 'Work permit and employment visa assistance for qualified international opportunities with practical document guidance.',
     icon: Building2,
   },
   {
     title: 'Family Visa',
-    description: 'Dependent, spouse, and family joining visa documentation prepared with care and clarity.',
+    description: 'Dependent, spouse, and family joining visa documentation prepared with care, clarity, and country-specific checklists.',
     icon: HeartHandshake,
   },
   {
@@ -102,7 +105,7 @@ export const services = [
   },
   {
     title: 'Travel Consultation',
-    description: 'Personalized visa route selection based on your purpose, travel history, timeline, and destination.',
+    description: 'Personalized visa route selection for Indian travellers based on purpose, travel history, timeline, and destination.',
     icon: Handshake,
   },
   {
@@ -176,13 +179,14 @@ export const countries = [
 ];
 
 export const whyChooseUs = [
-  { title: 'Fast Processing', text: 'Clear timelines, priority preparation, and timely application tracking.', icon: Clock3 },
-  { title: 'Expert Guidance', text: 'Destination-specific consultants help you choose the right visa path.', icon: BadgeCheck },
-  { title: 'Transparent Pricing', text: 'Service scope and fees are explained before work begins.', icon: CheckCircle2 },
-  { title: 'Trusted Agency', text: 'Professional handling, privacy-first practices, and verified documentation workflows.', icon: ShieldCheck },
-  { title: 'Documentation Support', text: 'Forms, letters, travel plans, and evidence are checked before submission.', icon: FileCheck2 },
+  { title: 'Surat-based, India-wide Service', text: 'Local support from Surat with remote consultation for applicants across Gujarat and all over India.', icon: MapPinned },
+  { title: 'Fast Processing', text: 'Clear timelines, priority preparation, and timely application tracking for urgent and planned travel.', icon: Clock3 },
+  { title: 'Expert Guidance', text: 'Destination-specific consultants help you choose the right visa path before money and time are wasted.', icon: BadgeCheck },
+  { title: 'Transparent Pricing', text: 'Service scope and fees are explained before work begins, with no confusing promises.', icon: CheckCircle2 },
+  { title: 'Trusted Visa Agency', text: 'Professional handling, privacy-first practices, and verified documentation workflows.', icon: ShieldCheck },
+  { title: 'Documentation Support', text: 'Forms, letters, travel plans, financial documents, and evidence are checked before submission.', icon: FileCheck2 },
   { title: '24x7 Support', text: 'Assistance for urgent questions, travel updates, and post-submission coordination.', icon: Headphones },
-  { title: 'Personal Assistance', text: 'Every applicant receives a practical checklist and dedicated follow-up.', icon: Handshake },
+  { title: 'Personal Assistance', text: 'Every applicant receives a practical checklist, dedicated follow-up, and clear next steps.', icon: Handshake },
 ];
 
 export const processSteps = [
@@ -235,7 +239,7 @@ export const testimonials = [
 export const faqs = [
   {
     question: 'Which visa categories do you handle?',
-    answer: 'We assist with visit, tourist, business, student, work, family, Umrah, passport, travel consultation, overseas job assistance, and documentation support.',
+    answer: 'We assist with visit, tourist, business, student, work, family, Umrah, passport, travel consultation, overseas job assistance, and documentation support for clients in Surat, Gujarat, and across India.',
   },
   {
     question: 'Can you guarantee visa approval?',

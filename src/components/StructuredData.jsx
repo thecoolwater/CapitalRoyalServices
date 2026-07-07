@@ -6,16 +6,19 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'TravelAgency',
     name: company.name,
-    description: 'Professional visa, immigration, tours, Umrah, passport, documentation, and overseas job consultancy services.',
+    description: 'Surat-based visa, immigration, tours, Umrah, passport, documentation, and overseas job consultancy services for clients across India.',
     url: siteUrl,
+    image: `${siteUrl}capital-royal-services-poster.jpg`,
+    logo: `${siteUrl}capital-royal-logo.jpg`,
     telephone: company.phone,
     email: company.email,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: company.address,
+      addressLocality: 'Surat',
+      addressRegion: 'Gujarat',
       addressCountry: 'IN',
     },
-    areaServed: ['UAE', 'Saudi Arabia', 'United Kingdom', 'United States', 'Germany', 'Canada', 'Australia', 'Singapore', 'Japan'],
+    areaServed: ['India', 'Gujarat', 'Surat', 'UAE', 'Saudi Arabia', 'United Kingdom', 'United States', 'Germany', 'Canada', 'Australia', 'Singapore', 'Japan'],
     makesOffer: services.slice(0, 8).map((service) => ({
       '@type': 'Offer',
       itemOffered: {

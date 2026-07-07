@@ -4,6 +4,9 @@ import { PageHero } from '../components/PageHero';
 import { SectionHeading } from '../components/SectionHeading';
 import { company, stats } from '../data/siteData';
 import { StatGrid } from '../components/StatGrid';
+import { WhyChooseUsSection } from '../components/WhyChooseUsSection';
+import { FaqSection } from '../components/FaqSection';
+import { ContactSection } from '../components/ContactSection';
 
 export function About() {
   const values = [
@@ -17,8 +20,8 @@ export function About() {
     <>
       <PageHero
         eyebrow="About Us"
-        title="A premium consultancy built around confident international journeys"
-        text={`${company.name} helps individuals, families, students, professionals, and businesses prepare stronger travel and visa applications with clarity and care.`}
+        title="Visa consultant in Surat helping travellers across India"
+        text={`${company.name} is a Surat-based visa and travel consultancy helping individuals, families, students, professionals, and businesses across India prepare stronger international travel applications.`}
       />
 
       <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
@@ -27,11 +30,11 @@ export function About() {
             <SectionHeading
               align="left"
               eyebrow="Our Approach"
-              title="Professional guidance without confusion"
-              text="Visa and immigration processes can feel complex because every destination has its own rules, evidence standards, and processing habits. We translate that complexity into a clear plan."
+              title="Professional visa guidance without confusion"
+              text="Visa and immigration processes can feel complex because every destination has its own rules, evidence standards, and processing habits. We translate that complexity into a clear, India-friendly plan."
             />
             <p className="text-lg leading-8 text-slate-600">
-              From short visits to student and work pathways, our role is to help clients understand requirements, prepare clean documentation, and move through the process with fewer surprises.
+              From short visits to student and work pathways, our role is to help clients in Surat, Gujarat, and across India understand requirements, prepare clean documentation, and move through the process with fewer surprises.
             </p>
           </div>
           <motion.img
@@ -61,6 +64,10 @@ export function About() {
           </div>
         </div>
       </section>
+
+      <WhyChooseUsSection />
+      <FaqSection />
+      <ContactSection />
     </>
   );
 }

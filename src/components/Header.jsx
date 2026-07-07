@@ -22,12 +22,16 @@ export function Header() {
 
   return (
     <header className={`fixed inset-x-0 top-0 z-50 transition duration-300 ${scrolled ? 'bg-white/95 shadow-lg shadow-navy/10 backdrop-blur-xl' : 'bg-transparent'}`}>
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link to="/" className="focus-ring flex items-center gap-3 rounded-full" aria-label="Capital Royal Services home">
-          <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-navy text-lg font-black text-lightGold shadow-gold">
-            CR
-          </span>
-          <span className="leading-tight">
+      <div className="mx-auto flex max-w-screen-2xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
+        <Link to="/" className="focus-ring flex shrink-0 items-center gap-3 rounded-full" aria-label="Capital Royal Services home">
+          <img
+            src={company.logo}
+            alt="Capital Royal Services logo"
+            className="h-14 w-14 rounded-2xl object-cover shadow-gold"
+            width="56"
+            height="56"
+          />
+          <span className="hidden leading-tight sm:block">
             <span className={`block font-heading text-base font-extrabold ${scrolled ? 'text-navy' : 'text-white'}`}>
               Capital Royal
             </span>
@@ -35,13 +39,13 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 xl:flex" aria-label="Primary navigation">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary navigation">
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `focus-ring rounded-full px-3 py-2 text-sm font-bold transition ${
+                `focus-ring rounded-full px-3 py-2 text-[13px] font-bold transition xl:text-sm ${
                   isActive
                     ? scrolled
                       ? 'bg-navy text-white'
@@ -57,7 +61,7 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 xl:flex">
+        <div className="hidden shrink-0 items-center gap-2 lg:flex xl:gap-3">
           <a
             href={`tel:${company.phone.replace(/\s/g, '')}`}
             className={`focus-ring inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-bold transition ${
@@ -74,7 +78,7 @@ export function Header() {
 
         <button
           type="button"
-          className={`focus-ring inline-flex h-11 w-11 items-center justify-center rounded-full xl:hidden ${
+          className={`focus-ring ml-auto inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full lg:hidden ${
             scrolled ? 'bg-navy text-white' : 'bg-white/10 text-white backdrop-blur'
           }`}
           aria-label={open ? 'Close menu' : 'Open menu'}
@@ -86,7 +90,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <div className="mx-4 mb-4 rounded-2xl bg-white p-3 shadow-premium xl:hidden">
+        <div className="mx-4 mb-4 rounded-2xl bg-white p-3 shadow-premium lg:hidden">
           <nav className="grid gap-1" aria-label="Mobile navigation">
             {navLinks.map((link) => (
               <NavLink

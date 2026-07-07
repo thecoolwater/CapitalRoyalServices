@@ -1,4 +1,4 @@
-export const siteUrl = 'https://capitalroyalservices.github.io/CapitalRoyalServices/';
+export const siteUrl = 'https://thecoolwater.github.io/CapitalRoyalServices/';
 
 export function setPageMeta({ title, description }) {
   document.title = `${title} | Capital Royal Services`;

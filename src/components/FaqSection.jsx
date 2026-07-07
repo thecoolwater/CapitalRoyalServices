@@ -11,9 +11,9 @@ export function FaqSection() {
     <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <SectionHeading
-          eyebrow="FAQ"
+          eyebrow="Visa FAQ"
           title="Answers before you begin"
-          text="A few practical notes about timelines, approvals, documents, and consultation before you start your application."
+          text="Practical notes about timelines, approvals, documents, and consultation before you start your visa application from Surat or anywhere in India."
         />
 
         <div className="space-y-4">

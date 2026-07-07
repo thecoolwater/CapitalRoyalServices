@@ -8,7 +8,13 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
         <div>
           <div className="mb-5 flex items-center gap-3">
-            <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold text-lg font-black text-navy">CR</span>
+            <img
+              src={company.logo}
+              alt="Capital Royal Services logo"
+              className="h-14 w-14 rounded-2xl object-cover shadow-gold"
+              width="56"
+              height="56"
+            />
             <div>
               <p className="font-heading text-lg font-extrabold">Capital Royal Services</p>
               <p className="text-sm text-white/60">{company.tagline}</p>
@@ -46,6 +52,10 @@ export function Footer() {
           <a href={`tel:${company.phone.replace(/\s/g, '')}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
             <Phone size={18} aria-hidden="true" />
             {company.phone}
+          </a>
+          <a href={`tel:${company.secondaryPhone.replace(/\s/g, '')}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
+            <Phone size={18} aria-hidden="true" />
+            {company.secondaryPhone}
           </a>
           <a href={`mailto:${company.email}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
             <Mail size={18} aria-hidden="true" />

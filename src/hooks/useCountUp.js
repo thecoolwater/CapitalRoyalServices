@@ -5,13 +5,14 @@ import { useRef } from 'react';
 export function useCountUp(target, duration = 1300) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(target);
 
   useEffect(() => {
     if (!isInView) return undefined;
 
     let frame;
     const start = performance.now();
+    setValue(0);
 
     const tick = (now) => {
       const progress = Math.min((now - start) / duration, 1);

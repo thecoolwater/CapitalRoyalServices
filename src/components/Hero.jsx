@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { BadgeCheck, Briefcase, Luggage, Plane, Stamp } from 'lucide-react';
 import { Button } from './Button';
-import { stats, trustBadges } from '../data/siteData';
+import { company, stats, trustBadges } from '../data/siteData';
 import { StatGrid } from './StatGrid';
 
 export function Hero() {
@@ -31,7 +31,7 @@ export function Hero() {
       </motion.svg>
 
       <motion.div
-        className="absolute right-[14%] top-32 hidden rounded-full bg-white/10 p-4 text-lightGold backdrop-blur-md lg:block"
+        className="absolute right-[14%] top-32 hidden rounded-full bg-white/10 p-4 text-lightGold backdrop-blur-md 2xl:block"
         animate={{ y: [0, -16, 0], rotate: [0, 4, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
@@ -42,27 +42,29 @@ export function Hero() {
       <FloatingElement className="right-[7%] top-[48%]" icon={Briefcase} label="Business" delay={0.7} />
       <FloatingElement className="bottom-[18%] left-[12%]" icon={Luggage} label="Travel Ready" delay={1.2} />
 
-      <div className="relative z-10 mx-auto grid max-w-7xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:pb-28">
-        <div>
+      <div className="relative z-10 mx-auto grid min-w-0 max-w-7xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:pb-28">
+        <div className="min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold text-lightGold backdrop-blur"
+            className="mb-6 inline-flex max-w-full items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold leading-6 text-lightGold backdrop-blur sm:rounded-full"
           >
-            <BadgeCheck size={17} aria-hidden="true" />
-            Trusted visa, immigration and travel consultancy
+            <BadgeCheck className="shrink-0" size={17} aria-hidden="true" />
+            <span className="min-w-0 break-words">Surat-based visa, immigration and travel consultancy serving all India</span>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1 }}
-            className="font-heading text-5xl font-extrabold leading-[1.02] sm:text-6xl lg:text-7xl"
+            className="font-heading text-4xl font-extrabold leading-[1.06] sm:text-6xl lg:text-7xl"
           >
             Explore The World
             <span className="block text-white/90">With</span>
-            <span className="gold-text block">Capital Royal Services</span>
+            <span className="gold-text block">
+              Capital Royal <span className="block sm:inline">Services</span>
+            </span>
           </motion.h1>
 
           <motion.p
@@ -72,6 +74,7 @@ export function Hero() {
             className="mt-6 max-w-2xl text-lg leading-8 text-white/76"
           >
             Premium support for visit, tourist, business, student, work, family, Umrah, passport, documentation, tour packages, and overseas job assistance.
+            Based in Surat, we guide travellers, students, families, and professionals across India with clear visa file preparation.
           </motion.p>
 
           <motion.div
@@ -100,19 +103,15 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95, y: 28 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative"
+          className="relative min-w-0"
         >
           <div className="glass-panel overflow-hidden rounded-[2rem] p-3">
             <img
-              src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1100&q=82"
-              alt="Visa consultant reviewing travel documents with a client"
-              className="h-[440px] w-full rounded-[1.5rem] object-cover md:h-[560px]"
+              src={company.poster}
+              alt="Capital Royal Services visa and travel services poster"
+              className="h-[440px] w-full rounded-[1.5rem] bg-white object-contain md:h-[560px]"
               fetchPriority="high"
             />
-            <div className="absolute bottom-7 left-7 right-7 rounded-3xl bg-navy/78 p-5 text-white backdrop-blur-md">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-lightGold">Premium file care</p>
-              <p className="mt-2 text-2xl font-extrabold">From consultation to approval support.</p>
-            </div>
           </div>
         </motion.div>
       </div>
@@ -127,7 +126,7 @@ export function Hero() {
 function FloatingElement({ icon: Icon, label, className, delay = 0 }) {
   return (
     <motion.div
-      className={`absolute z-10 hidden items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur-md md:flex ${className}`}
+      className={`absolute z-10 hidden items-center gap-2 rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-sm font-bold text-white backdrop-blur-md 2xl:flex ${className}`}
       animate={{ y: [0, -13, 0] }}
       transition={{ duration: 4.5, repeat: Infinity, ease: 'easeInOut', delay }}
       aria-hidden="true"

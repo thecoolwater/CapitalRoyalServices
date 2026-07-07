@@ -10,9 +10,9 @@ export function WhyChooseUsSection() {
       <div className="absolute -right-28 top-10 h-80 w-80 rounded-full bg-royal/20 blur-3xl" aria-hidden="true" />
       <div className="relative mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Why Choose Us"
-          title="Professional guidance with the polish of a premium agency"
-          text="You get practical advice, organized documents, transparent communication, and a team that treats your journey like it matters."
+          eyebrow="About Our Visa Consultancy"
+          title="Why travellers across India choose Capital Royal Services"
+          text="You get practical advice, organized documents, transparent communication, and a Surat-based team that supports applicants across India."
           light
         />
 
