@@ -4,40 +4,40 @@ import { company } from '../data/siteData';
 
 export function HeroTravelScene() {
   return (
-    <div className="hero-travel-scene relative aspect-[4/3] min-h-[390px] overflow-hidden rounded-[1.5rem] bg-navy text-white">
+    <div className="hero-travel-scene relative min-h-[430px] overflow-hidden rounded-[1.5rem] bg-navy text-white sm:aspect-[4/3] sm:min-h-[390px]">
       <div className="hero-scene-grid" aria-hidden="true" />
       <div className="hero-scene-glow hero-scene-glow-a" aria-hidden="true" />
       <div className="hero-scene-glow hero-scene-glow-b" aria-hidden="true" />
 
-      <div className="relative z-10 flex h-full flex-col justify-between p-5 sm:p-7">
+      <div className="relative z-10 flex h-full min-h-[430px] flex-col justify-between p-4 sm:min-h-0 sm:p-7">
         <div className="flex items-start justify-between gap-4">
           <div className="flex items-center gap-3">
             <img
               src={company.logo}
               alt=""
-              className="h-14 w-14 rounded-xl object-cover shadow-gold"
+              className="h-12 w-12 rounded-xl object-cover shadow-gold sm:h-14 sm:w-14"
               width="56"
               height="56"
               aria-hidden="true"
             />
             <div>
-              <p className="font-heading text-sm font-extrabold uppercase tracking-[0.08em] text-lightGold">
+              <p className="font-heading text-xs font-extrabold uppercase tracking-[0.06em] text-lightGold sm:text-sm sm:tracking-[0.08em]">
                 Capital Royal Services
               </p>
               <p className="text-xs font-bold text-white/70">{company.tagline}</p>
             </div>
           </div>
-          <span className="rounded-full bg-gold px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-navy shadow-gold">
+          <span className="hidden rounded-full bg-gold px-4 py-2 text-xs font-extrabold uppercase tracking-wide text-navy shadow-gold sm:inline-flex">
             Apply Now
           </span>
         </div>
 
         <div className="grid items-end gap-5 sm:grid-cols-[1fr_0.9fr]">
           <div>
-            <p className="mb-3 inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-extrabold uppercase tracking-[0.18em] text-lightGold">
+            <p className="mb-3 inline-flex max-w-full rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[0.12em] text-lightGold sm:text-xs sm:tracking-[0.18em]">
               Visit - Student - Work - Umrah
             </p>
-            <h2 className="font-heading text-4xl font-extrabold leading-[0.98] xl:text-5xl">
+            <h2 className="font-heading text-[2.6rem] font-extrabold leading-[0.96] sm:text-4xl xl:text-5xl">
               Visa & Travel
               <span className="block text-lightGold">Made Simple</span>
             </h2>
@@ -71,7 +71,7 @@ export function HeroTravelScene() {
           </div>
         </div>
 
-        <div className="grid gap-3 text-xs font-extrabold uppercase tracking-wide text-white sm:grid-cols-3">
+        <div className="grid gap-3 text-[11px] font-extrabold uppercase tracking-wide text-white sm:grid-cols-3 sm:text-xs">
           <span className="hero-service-chip">
             <Stamp size={16} aria-hidden="true" />
             Passport
@@ -91,7 +91,7 @@ export function HeroTravelScene() {
         <path d="M55 265C185 123 313 307 446 171C562 51 658 92 780 45" />
       </svg>
       <motion.div
-        className="hero-scene-plane"
+        className="hero-scene-plane hidden sm:block"
         animate={{ x: [-18, 18, -18], y: [10, -10, 10], rotate: [-10, 2, -10] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
         aria-hidden="true"
