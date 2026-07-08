@@ -115,7 +115,7 @@ export function Hero() {
           <div className="glass-panel relative overflow-hidden rounded-[2rem] p-3">
             <video
               ref={videoRef}
-              className="aspect-video w-full rounded-[1.5rem] bg-navy object-cover"
+              className="aspect-video w-full rounded-[1.5rem] bg-white object-contain"
               poster={company.poster}
               autoPlay
               muted
@@ -124,7 +124,7 @@ export function Hero() {
               preload="auto"
               aria-label="Capital Royal Services visa and travel promotional video"
             >
-              <source src={company.heroVideo} type="video/webm" />
+              <source src={company.heroVideo} type="video/mp4" />
             </video>
           </div>
         </motion.div>

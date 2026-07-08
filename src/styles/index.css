@@ -153,44 +153,100 @@ img {
   transform: rotate(-20deg);
 }
 
-.footer-mountains {
-  position: relative;
-  height: 190px;
-  margin-top: -92px;
-  background:
-    linear-gradient(to top, #071832 0 46%, transparent 46%),
-    linear-gradient(165deg, transparent 0 20%, rgba(7, 24, 50, 0.18) 21% 45%, transparent 46%),
-    linear-gradient(22deg, transparent 0 30%, rgba(7, 24, 50, 0.12) 31% 52%, transparent 53%);
-}
-
-.footer-mountain {
+.footer-transport-card {
   position: absolute;
-  bottom: 0;
-  width: 0;
-  height: 0;
-  border-left: 220px solid transparent;
-  border-right: 220px solid transparent;
-  border-bottom: 150px solid #0b243e;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(7, 24, 50, 0.08);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.86);
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 800;
+  color: #071832;
+  box-shadow: 0 16px 44px rgba(7, 24, 50, 0.1);
+  backdrop-filter: blur(12px);
 }
 
-.footer-mountain-a {
-  left: -70px;
+.footer-transport-card-a {
+  left: 3%;
+  bottom: 48px;
 }
 
-.footer-mountain-b {
-  left: 26%;
-  border-left-width: 290px;
-  border-right-width: 290px;
-  border-bottom-width: 190px;
-  border-bottom-color: #082037;
+.footer-transport-card-b {
+  right: 6%;
+  bottom: 18px;
 }
 
-.footer-mountain-c {
-  right: -90px;
-  border-left-width: 260px;
-  border-right-width: 260px;
-  border-bottom-width: 170px;
-  border-bottom-color: #0c2c4f;
+.footer-transport-card-c {
+  left: 34%;
+  bottom: -28px;
+}
+
+.footer-transport-strip {
+  position: relative;
+  height: 176px;
+  margin-top: -82px;
+  overflow: hidden;
+  background:
+    linear-gradient(to top, #071832 0 43%, transparent 43%),
+    radial-gradient(circle at 18% 35%, rgba(23, 102, 209, 0.16), transparent 24%),
+    radial-gradient(circle at 78% 22%, rgba(201, 154, 61, 0.18), transparent 26%);
+}
+
+.footer-runway {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 70px;
+  height: 48px;
+  background:
+    repeating-linear-gradient(90deg, transparent 0 48px, rgba(243, 212, 135, 0.55) 48px 82px, transparent 82px 128px),
+    linear-gradient(180deg, rgba(7, 24, 50, 0.04), rgba(7, 24, 50, 0.2));
+  transform: skewY(-2deg);
+}
+
+.footer-train-track {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  bottom: 34px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 4px solid rgba(243, 212, 135, 0.72);
+}
+
+.footer-train-track span {
+  width: 4px;
+  height: 30px;
+  background: rgba(243, 212, 135, 0.48);
+  transform: rotate(18deg);
+}
+
+.footer-strip-plane,
+.footer-strip-train,
+.footer-strip-bus {
+  position: absolute;
+  z-index: 2;
+  color: #f3d487;
+}
+
+.footer-strip-plane {
+  right: 13%;
+  top: 20px;
+  transform: rotate(-16deg);
+}
+
+.footer-strip-train {
+  left: 18%;
+  bottom: 42px;
+}
+
+.footer-strip-bus {
+  right: 25%;
+  bottom: 40px;
 }
 
 @keyframes promo-shine {

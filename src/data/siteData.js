@@ -33,7 +33,8 @@ export const company = {
   location: 'India',
   logo: `${assetBase}capital-royal-logo.jpg`,
   poster: `${assetBase}capital-royal-services-poster.jpg`,
-  heroVideo: `${assetBase}capital-royal-hero-video.webm`,
+  heroVideo: `${assetBase}capital-royal-travel-animation.mp4`,
+  brandVideo: `${assetBase}capital-royal-hero-video.webm`,
 };
 
 export const navLinks = [
@@ -119,16 +120,19 @@ export const promoStories = [
   {
     title: 'Visit Visa Made Simple',
     text: 'A vertical travel-promo style WebP for quick visa enquiries, tourist travel, business visits, and family trips.',
+    cta: 'Apply Now',
     image: `${assetBase}travel-promo-visa.webp`,
   },
   {
     title: 'Umrah and Family Visit',
     text: 'Premium branded story creative for spiritual journeys, family visits, hotel guidance, and travel support.',
+    cta: 'Plan With Us',
     image: `${assetBase}travel-promo-umrah.webp`,
   },
   {
     title: 'Study, Work and Business',
     text: 'A polished promo panel for international opportunities, documentation, checklists, and filing support.',
+    cta: 'Start Today',
     image: `${assetBase}travel-promo-study-work.webp`,
   },
 ];

@@ -1,4 +1,5 @@
 import { ContactSection } from '../components/ContactSection';
+import { BrandVideoSection } from '../components/BrandVideoSection';
 import { DestinationsSection } from '../components/DestinationsSection';
 import { FaqSection } from '../components/FaqSection';
 import { Hero } from '../components/Hero';
@@ -12,6 +13,7 @@ export function Home() {
   return (
     <>
       <Hero />
+      <BrandVideoSection />
       <ServicesSection limit={8} />
       <PromoStoriesSection />
       <DestinationsSection limit={9} />

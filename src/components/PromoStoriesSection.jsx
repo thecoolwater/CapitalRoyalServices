@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { promoStories } from '../data/siteData';
 import { fadeUp, staggerContainer } from '../animations/variants';
 import { SectionHeading } from './SectionHeading';
@@ -22,24 +23,31 @@ export function PromoStoriesSection() {
           viewport={{ once: true, margin: '-80px' }}
           className="grid gap-6 lg:grid-cols-3"
         >
-          {promoStories.map((story, index) => (
+          {promoStories.map((story) => (
             <motion.article
               key={story.title}
               variants={fadeUp}
               className="group overflow-hidden rounded-3xl bg-navy p-3 shadow-premium"
             >
-              <div className="promo-story-frame relative overflow-hidden rounded-[1.35rem] bg-navy">
+              <Link
+                to="/contact"
+                className="promo-story-frame relative block overflow-hidden rounded-[1.35rem] border-0 bg-navy p-0 shadow-none"
+                aria-label={`${story.cta} for ${story.title}`}
+              >
                 <img
                   src={story.image}
                   alt={`${story.title} Capital Royal Services WebP travel promo`}
                   className="aspect-[2/3] w-full object-cover transition duration-700 group-hover:scale-[1.025]"
-                  loading={index === 0 ? 'eager' : 'lazy'}
+                  loading="eager"
                   decoding="async"
                 />
-              </div>
+              </Link>
               <div className="px-3 pb-4 pt-5 text-white">
                 <h3 className="font-heading text-xl font-extrabold">{story.title}</h3>
                 <p className="mt-2 text-sm leading-6 text-white/70">{story.text}</p>
+                <Button to="/contact" className="mt-5 w-full" icon>
+                  {story.cta}
+                </Button>
               </div>
             </motion.article>
           ))}

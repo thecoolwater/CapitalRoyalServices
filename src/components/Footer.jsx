@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone, Plane } from 'lucide-react';
+import { BusFront, Facebook, Instagram, Linkedin, Mail, MapPin, MessageCircle, Phone, Plane, Ship, TrainFront } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { company, countries, navLinks, services } from '../data/siteData';
 import { Button } from './Button';
@@ -38,13 +38,33 @@ export function Footer() {
           </div>
           <div className="footer-route" aria-hidden="true" />
           <Plane className="footer-route-plane text-gold" size={34} aria-hidden="true" />
+          <div className="footer-transport-card footer-transport-card-a">
+            <TrainFront size={22} aria-hidden="true" />
+            Train transfers
+          </div>
+          <div className="footer-transport-card footer-transport-card-b">
+            <Ship size={22} aria-hidden="true" />
+            Cruise & tours
+          </div>
+          <div className="footer-transport-card footer-transport-card-c">
+            <BusFront size={22} aria-hidden="true" />
+            Local travel
+          </div>
         </div>
       </div>
 
-      <div className="footer-mountains" aria-hidden="true">
-        <span className="footer-mountain footer-mountain-a" />
-        <span className="footer-mountain footer-mountain-b" />
-        <span className="footer-mountain footer-mountain-c" />
+      <div className="footer-transport-strip" aria-hidden="true">
+        <div className="footer-runway" />
+        <div className="footer-train-track">
+          <span />
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
+        <Plane className="footer-strip-plane" size={42} />
+        <TrainFront className="footer-strip-train" size={44} />
+        <BusFront className="footer-strip-bus" size={40} />
       </div>
 
       <div className="relative bg-navy text-white">
