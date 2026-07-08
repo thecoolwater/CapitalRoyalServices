@@ -1,19 +1,13 @@
 import { motion } from 'framer-motion';
 import { BadgeCheck, Briefcase, Luggage, Plane, Stamp } from 'lucide-react';
-import { useEffect, useRef } from 'react';
 import { Button } from './Button';
-import { company, stats, trustBadges } from '../data/siteData';
+import { stats, trustBadges } from '../data/siteData';
 import { StatGrid } from './StatGrid';
+import { HeroTravelScene } from './HeroTravelScene';
 
 export function Hero() {
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    videoRef.current?.play().catch(() => {});
-  }, []);
-
   return (
-    <section className="relative isolate min-h-screen overflow-hidden bg-navy-royal pt-36 text-white lg:pt-28">
+    <section className="relative isolate overflow-hidden bg-navy-royal pt-32 text-white lg:min-h-[820px] lg:pt-24">
       <div className="absolute inset-0 map-grid opacity-70" aria-hidden="true" />
       <div className="absolute -left-28 top-16 h-80 w-80 rounded-full bg-royal/30 blur-3xl" aria-hidden="true" />
       <div className="absolute -right-24 bottom-12 h-96 w-96 rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
@@ -49,7 +43,7 @@ export function Hero() {
       <FloatingElement className="right-[7%] top-[48%]" icon={Briefcase} label="Business" delay={0.7} />
       <FloatingElement className="bottom-[18%] left-[12%]" icon={Luggage} label="Travel Ready" delay={1.2} />
 
-      <div className="relative z-10 mx-auto grid min-w-0 max-w-7xl items-center gap-12 px-4 pb-20 sm:px-6 lg:grid-cols-[1.06fr_0.94fr] lg:px-8 lg:pb-28">
+      <div className="relative z-10 mx-auto grid min-w-0 max-w-7xl items-start gap-12 px-4 pb-16 sm:px-6 lg:grid-cols-[1.02fr_0.98fr] lg:px-8 lg:pb-20">
         <div className="min-w-0">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -110,22 +104,10 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.95, y: 28 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="relative min-w-0"
+          className="relative min-w-0 lg:pt-12 xl:pt-16"
         >
           <div className="glass-panel relative overflow-hidden rounded-[2rem] p-3">
-            <video
-              ref={videoRef}
-              className="aspect-video w-full rounded-[1.5rem] bg-white object-contain"
-              poster={company.poster}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              aria-label="Capital Royal Services visa and travel promotional video"
-            >
-              <source src={company.heroVideo} type="video/mp4" />
-            </video>
+            <HeroTravelScene />
           </div>
         </motion.div>
       </div>
