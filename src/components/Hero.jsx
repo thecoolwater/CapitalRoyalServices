@@ -1,12 +1,19 @@
 import { motion } from 'framer-motion';
 import { BadgeCheck, Briefcase, Luggage, Plane, Stamp } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 import { Button } from './Button';
 import { company, stats, trustBadges } from '../data/siteData';
 import { StatGrid } from './StatGrid';
 
 export function Hero() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    videoRef.current?.play().catch(() => {});
+  }, []);
+
   return (
-    <section className="relative isolate min-h-screen overflow-hidden bg-navy-royal pt-28 text-white">
+    <section className="relative isolate min-h-screen overflow-hidden bg-navy-royal pt-36 text-white lg:pt-28">
       <div className="absolute inset-0 map-grid opacity-70" aria-hidden="true" />
       <div className="absolute -left-28 top-16 h-80 w-80 rounded-full bg-royal/30 blur-3xl" aria-hidden="true" />
       <div className="absolute -right-24 bottom-12 h-96 w-96 rounded-full bg-gold/20 blur-3xl" aria-hidden="true" />
@@ -51,7 +58,7 @@ export function Hero() {
             className="mb-6 inline-flex max-w-full items-center gap-2 rounded-2xl border border-white/20 bg-white/10 px-4 py-2 text-sm font-bold leading-6 text-lightGold backdrop-blur sm:rounded-full"
           >
             <BadgeCheck className="shrink-0" size={17} aria-hidden="true" />
-            <span className="min-w-0 break-words">Visa, immigration and travel consultancy serving all India</span>
+            <span className="min-w-0 break-words">Visa and travel consultancy serving all India</span>
           </motion.div>
 
           <motion.h1
@@ -105,13 +112,20 @@ export function Hero() {
           transition={{ duration: 0.9, delay: 0.2 }}
           className="relative min-w-0"
         >
-          <div className="glass-panel overflow-hidden rounded-[2rem] p-3">
-            <img
-              src={company.poster}
-              alt="Capital Royal Services visa and travel services poster"
-              className="h-[440px] w-full rounded-[1.5rem] bg-white object-contain md:h-[560px]"
-              fetchPriority="high"
-            />
+          <div className="glass-panel relative overflow-hidden rounded-[2rem] p-3">
+            <video
+              ref={videoRef}
+              className="aspect-video w-full rounded-[1.5rem] bg-navy object-cover"
+              poster={company.poster}
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="auto"
+              aria-label="Capital Royal Services visa and travel promotional video"
+            >
+              <source src={company.heroVideo} type="video/webm" />
+            </video>
           </div>
         </motion.div>
       </div>

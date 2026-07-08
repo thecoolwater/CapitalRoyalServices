@@ -20,6 +20,11 @@ body {
   overflow-x: hidden;
 }
 
+section[id],
+footer[id] {
+  scroll-margin-top: 96px;
+}
+
 button,
 input,
 textarea,
@@ -99,6 +104,93 @@ img {
 
 .promo-plane {
   animation: promo-float 4.8s ease-in-out infinite;
+}
+
+.travel-footer {
+  min-height: 620px;
+}
+
+.footer-sun {
+  position: absolute;
+  right: 12%;
+  top: 12px;
+  width: 130px;
+  height: 130px;
+  border-radius: 999px;
+  background: rgba(243, 212, 135, 0.6);
+  filter: blur(0.2px);
+}
+
+.footer-globe-card {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  max-width: 520px;
+  margin-left: auto;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.82);
+  padding: 22px;
+  box-shadow: 0 24px 70px rgba(7, 24, 50, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.footer-route {
+  position: absolute;
+  inset: 86px 10% auto auto;
+  width: 360px;
+  height: 160px;
+  border-top: 3px dashed rgba(201, 154, 61, 0.55);
+  border-radius: 50%;
+  transform: rotate(-10deg);
+}
+
+.footer-route-plane {
+  position: absolute;
+  right: 11%;
+  top: 62px;
+  transform: rotate(-20deg);
+}
+
+.footer-mountains {
+  position: relative;
+  height: 190px;
+  margin-top: -92px;
+  background:
+    linear-gradient(to top, #071832 0 46%, transparent 46%),
+    linear-gradient(165deg, transparent 0 20%, rgba(7, 24, 50, 0.18) 21% 45%, transparent 46%),
+    linear-gradient(22deg, transparent 0 30%, rgba(7, 24, 50, 0.12) 31% 52%, transparent 53%);
+}
+
+.footer-mountain {
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 220px solid transparent;
+  border-right: 220px solid transparent;
+  border-bottom: 150px solid #0b243e;
+}
+
+.footer-mountain-a {
+  left: -70px;
+}
+
+.footer-mountain-b {
+  left: 26%;
+  border-left-width: 290px;
+  border-right-width: 290px;
+  border-bottom-width: 190px;
+  border-bottom-color: #082037;
+}
+
+.footer-mountain-c {
+  right: -90px;
+  border-left-width: 260px;
+  border-right-width: 260px;
+  border-bottom-width: 170px;
+  border-bottom-color: #0c2c4f;
 }
 
 @keyframes promo-shine {

@@ -5,16 +5,16 @@ import { SectionHeading } from './SectionHeading';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="bg-porcelain px-4 py-20 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
+    <section id="contact" className="overflow-hidden bg-porcelain px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto min-w-0 max-w-7xl">
         <SectionHeading
           eyebrow="Contact"
           title="Start with a free visa consultation"
           text="Tell us your destination, purpose of travel, and target date. Our team supports clients across India with the most practical next step."
         />
 
-        <div className="grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <div className="overflow-hidden rounded-[2rem] bg-navy text-white shadow-premium">
+        <div className="grid min-w-0 gap-6 lg:grid-cols-[0.95fr_1.05fr]">
+          <div className="min-w-0 overflow-hidden rounded-[2rem] bg-navy text-white shadow-premium">
             <div className="h-72 bg-[url('https://images.unsplash.com/photo-1516738901171-8eb4fc13bd20?auto=format&fit=crop&w=1200&q=80')] bg-cover bg-center" role="img" aria-label="Modern business district office location" />
             <div className="space-y-5 p-7">
               <ContactItem icon={Phone} label="Phone" value={company.phone} href={`tel:${company.phone.replace(/\s/g, '')}`} />
@@ -34,15 +34,15 @@ export function ContactSection() {
             </div>
           </div>
 
-          <form className="premium-card rounded-[2rem] p-6 md:p-8" aria-label="Visa consultation form">
-            <div className="grid gap-5 md:grid-cols-2">
+          <form className="premium-card min-w-0 rounded-[2rem] p-6 md:p-8" aria-label="Visa consultation form">
+            <div className="grid min-w-0 gap-5 md:grid-cols-2">
               <Field label="Full Name" name="name" placeholder="Your full name" />
               <Field label="Phone / WhatsApp" name="phone" placeholder="+91 7698692693" />
               <Field label="Email" name="email" type="email" placeholder="you@example.com" />
               <Field label="Destination" name="destination" placeholder="Dubai, UK, Canada..." />
               <label className="md:col-span-2">
                 <span className="mb-2 block text-sm font-bold text-navy">Service Required</span>
-                <select className="focus-ring w-full rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm">
+                <select className="focus-ring w-full max-w-full rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm">
                   <option>Visit Visa</option>
                   <option>Tourist Visa</option>
                   <option>Business Visa</option>
@@ -59,7 +59,7 @@ export function ContactSection() {
                   rows="5"
                   name="message"
                   placeholder="Share your travel purpose, expected travel date, and any previous visa history."
-                  className="focus-ring w-full resize-none rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm"
+                  className="focus-ring w-full max-w-full resize-none rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm"
                 />
               </label>
             </div>
@@ -79,13 +79,13 @@ export function ContactSection() {
 
 function Field({ label, name, type = 'text', placeholder }) {
   return (
-    <label>
+    <label className="min-w-0">
       <span className="mb-2 block text-sm font-bold text-navy">{label}</span>
       <input
         name={name}
         type={type}
         placeholder={placeholder}
-        className="focus-ring w-full rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm"
+        className="focus-ring w-full max-w-full rounded-2xl border border-navy/10 bg-white px-4 py-3 text-slate-700 shadow-sm"
       />
     </label>
   );

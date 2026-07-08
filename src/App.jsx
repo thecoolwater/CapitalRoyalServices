@@ -58,9 +58,15 @@ export default function App() {
   const location = useLocation();
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (location.hash) {
+      window.setTimeout(() => {
+        document.querySelector(location.hash)?.scrollIntoView({ behavior: 'auto', block: 'start' });
+      }, 500);
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
     setPageMeta(pageMeta[location.pathname] || pageMeta['/']);
-  }, [location.pathname]);
+  }, [location.hash, location.pathname]);
 
   return (
     <>

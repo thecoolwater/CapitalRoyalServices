@@ -33,6 +33,7 @@ export const company = {
   location: 'India',
   logo: `${assetBase}capital-royal-logo.jpg`,
   poster: `${assetBase}capital-royal-services-poster.jpg`,
+  heroVideo: `${assetBase}capital-royal-hero-video.webm`,
 };
 
 export const navLinks = [
