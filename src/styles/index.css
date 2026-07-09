@@ -106,6 +106,134 @@ img {
   animation: promo-float 4.8s ease-in-out infinite;
 }
 
+.country-visa-card {
+  isolation: isolate;
+  box-shadow: 0 22px 60px rgba(7, 24, 50, 0.08);
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.country-visa-card::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  z-index: -1;
+  border-radius: 1.7rem;
+  background: linear-gradient(145deg, rgba(201, 154, 61, 0.88), rgba(23, 102, 209, 0.48), rgba(7, 24, 50, 0.08));
+  opacity: 0;
+  transition: opacity 0.42s ease;
+}
+
+.country-visa-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 34px 90px rgba(7, 24, 50, 0.16);
+}
+
+.country-visa-card:hover::before {
+  opacity: 1;
+}
+
+.country-card-shell {
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.42s ease;
+}
+
+.country-visa-card:hover .country-card-shell {
+  border-color: rgba(201, 154, 61, 0.42);
+  transform: rotateX(1.2deg) rotateY(-1.2deg);
+}
+
+.country-flag-badge {
+  display: grid;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff, #f7f9fc);
+  box-shadow: 0 12px 34px rgba(7, 24, 50, 0.12);
+  font-size: 30px;
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s ease;
+}
+
+.country-visa-card:hover .country-flag-badge {
+  transform: translateY(-6px) rotate(4deg) scale(1.06);
+  box-shadow: 0 20px 48px rgba(201, 154, 61, 0.24);
+}
+
+.country-hover-route {
+  position: absolute;
+  right: 18px;
+  bottom: 34px;
+  width: 190px;
+  height: 80px;
+  border-top: 3px dashed rgba(243, 212, 135, 0.78);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate3d(28px, 20px, 0) rotate(-12deg);
+  transition:
+    opacity 0.42s ease,
+    transform 0.56s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.country-hover-plane {
+  position: absolute;
+  right: 34px;
+  bottom: 74px;
+  color: #f3d487;
+  opacity: 0;
+  transform: translate3d(-40px, 30px, 0) rotate(-24deg) scale(0.7);
+  transition:
+    opacity 0.42s ease,
+    transform 0.56s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.country-visa-card:hover .country-hover-route,
+.country-visa-card:hover .country-hover-plane {
+  opacity: 1;
+}
+
+.country-visa-card:hover .country-hover-route {
+  transform: translate3d(0, 0, 0) rotate(-12deg);
+}
+
+.country-visa-card:hover .country-hover-plane {
+  transform: translate3d(0, 0, 0) rotate(-8deg) scale(1);
+}
+
+.country-card-reveal {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    max-height 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.35s ease,
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    margin-top 0.42s ease;
+}
+
+.country-visa-card:hover .country-card-reveal {
+  max-height: 160px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.country-card-cta {
+  transform: translateY(0);
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.3s ease;
+}
+
+.country-visa-card:hover .country-card-cta {
+  transform: translateY(-2px);
+}
+
 .hero-travel-scene {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
 }
