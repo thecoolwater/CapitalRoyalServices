@@ -234,6 +234,46 @@ img {
   transform: translateY(-2px);
 }
 
+.countries-page {
+  min-width: 0;
+}
+
+.countries-search-panel {
+  min-width: 0;
+}
+
+.countries-filter-scroll {
+  min-width: 0;
+  scrollbar-width: none;
+}
+
+.countries-filter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.countries-insight-card {
+  transition:
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.34s ease;
+}
+
+.countries-insight-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 42px rgba(7, 24, 50, 0.1);
+}
+
+@media (hover: none) {
+  .country-card-reveal {
+    max-height: 180px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .country-visa-card {
+    box-shadow: 0 20px 52px rgba(7, 24, 50, 0.1);
+  }
+}
+
 .hero-travel-scene {
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.16);
 }
