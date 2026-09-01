@@ -37,7 +37,7 @@ export function ContactSection() {
           <form className="premium-card min-w-0 rounded-[2rem] p-6 md:p-8" aria-label="Visa consultation form">
             <div className="grid min-w-0 gap-5 md:grid-cols-2">
               <Field label="Full Name" name="name" placeholder="Your full name" />
-              <Field label="Phone / WhatsApp" name="phone" placeholder="+91 7698692693" />
+              <Field label="Phone / WhatsApp" name="phone" placeholder="+91 8780044085" />
               <Field label="Email" name="email" type="email" placeholder="you@example.com" />
               <Field label="Destination" name="destination" placeholder="Dubai, UK, Canada..." />
               <label className="md:col-span-2">

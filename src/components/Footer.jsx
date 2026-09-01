@@ -98,9 +98,9 @@ export function Footer() {
               <Phone size={18} aria-hidden="true" />
               {company.phone}
             </a>
-            <a href={`https://wa.me/${company.whatsapp.replace(/\D/g, '')}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
+            <a href={`https://wa.me/${company.whatsapp.replace(/\D/g, '')}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold" target="_blank" rel="noreferrer">
               <MessageCircle size={18} aria-hidden="true" />
-              WhatsApp
+              WhatsApp {company.whatsapp}
             </a>
             <a href={`mailto:${company.email}`} className="focus-ring flex gap-3 rounded text-white/72 transition hover:text-lightGold">
               <Mail size={18} aria-hidden="true" />

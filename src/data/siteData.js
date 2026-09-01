@@ -27,7 +27,7 @@ export const company = {
   name: 'Capital Royal Services',
   tagline: 'Your Journey, Our Priority',
   phone: '+91 7698692693',
-  whatsapp: '+91 7698692693',
+  whatsapp: '+91 8780044085',
   email: 'info@capitalroyalservices.com',
   address: 'Capital Royal Services, India',
   location: 'India',
