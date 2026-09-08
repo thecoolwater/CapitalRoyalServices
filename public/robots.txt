@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://thecoolwater.github.io/CapitalRoyalServices/sitemap.xml
+Sitemap: https://capitalmytrip.com/sitemap.xml
