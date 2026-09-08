@@ -5,23 +5,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://capitalmytrip.com/about</loc>
+    <loc>https://capitalmytrip.com/#/about</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capitalmytrip.com/services</loc>
+    <loc>https://capitalmytrip.com/#/services</loc>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://capitalmytrip.com/countries</loc>
+    <loc>https://capitalmytrip.com/#/countries</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capitalmytrip.com/visa-process</loc>
+    <loc>https://capitalmytrip.com/#/visa-process</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://capitalmytrip.com/contact</loc>
+    <loc>https://capitalmytrip.com/#/contact</loc>
     <priority>0.9</priority>
   </url>
 </urlset>
